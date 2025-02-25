@@ -1,6 +1,7 @@
+# Redis Clone
+
 ## Project Strcuture 
-- after pulling  
-```
+After pulling the repository, you should see the following files: ```
 redis_clone/
 ├── server.py
 ├── protocol.py
@@ -9,27 +10,33 @@ redis_clone/
 └── README.md
 ```
 
+---
+
 ## Installation 
 
 1. Make sure dependencies have been installed
 
-`pip install gevent`
+ ```bash
+    pip install gevent
+    ```
 
 ## Running the Server
 
 1. Start the server by running 
 
-`python server.py`
+```bash
+    python server.py
+    ```
 
-2. The server will start listening on 127.0.0.1:31337 (by default)
+2. The server will start listening on **127.0.0.1:31337** (by default)
 
 ## Running the Client
 
-There are two ways to run the client
+You can interact with the client in two ways:  
 
-1. Interactice Python Session 
+### 1. **Interactive Python Session** 
 
-```
+```python
 $ python
 >>> from client import Client
 >>> client = Client()
@@ -82,11 +89,16 @@ if __name__ == '__main__':
     test_basic_operations()
 ```
 
-Then run it with:
+Then run the script using:  
 
-`pyhton test.py`
+```bash
+python test.py
+```
+
+---
 
 ## Troubleshooting
+
 ### Connection Issues
 
 - Make sure the server is running before starting the client
@@ -99,19 +111,20 @@ Then run it with:
 - Make sure both client and server are using the same protocol version
 - Debug using the print statements that trace the message flow
 
-## Extensions
-An extension to this project could be implementing the following:
+---
 
+## **Extensions and Performance Considerations**
+
+An extension to this project could be implementing the following:
 - Data persistence (save to disk)
-- Authentication
-- Replication (Leader-follower setup)
-- Transaction support
-- TTL for keys
+- Authentication - Secure client-server communication.
+- Replication (Leader-follower setup) - Leader-follower setup for scalability and fault tolerance.
+- Transaction support - Ensure atomicity and consistency.
+- TTL for keys - Automatic expiration of keys after a set time.
 - Additional data structures (sets, sorted sets, lists)
 
 ### Performance Considerations
-For production use, consider:
-
+Optimisations for production environments:  
 - Connection pooling
 - Buffer management
 - Periodic garbage collection
