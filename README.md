@@ -3,6 +3,9 @@
 ## Project Overview
 This project implements a Redis-like key-value store using Python, featuring a custom binary protocol for client-server communication. The implementation includes a server that can handle multiple clients concurrently and a client that can interact with the server using various commands.
 
+## Set up 
+- For information on how to run this project please refer to setup.md
+
 ## Core Components
 
 ### Server
