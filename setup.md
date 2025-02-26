@@ -1,7 +1,8 @@
 # Redis Clone
 
 ## Project Strcuture 
-After pulling the repository, you should see the following files: ```
+After pulling the repository, you should see the following files: 
+```
 redis_clone/
 ├── server.py
 ├── protocol.py
@@ -18,7 +19,7 @@ redis_clone/
 
  ```bash
     pip install gevent
-    ```
+```
 
 ## Running the Server
 
@@ -26,7 +27,7 @@ redis_clone/
 
 ```bash
     python server.py
-    ```
+```
 
 2. The server will start listening on **127.0.0.1:31337** (by default)
 
@@ -50,10 +51,12 @@ $ python
 {'nested': [1, 2, 3]}
 ```
 
-2. Create a Test Script
+
+
+### 2. **Create a Test Script**
 Create a file test.py:
 
-```
+```python
 from client import Client
 
 def test_basic_operations():
